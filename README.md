@@ -1,6 +1,6 @@
 Login Quote is a simple script that changes the message on the Mac OS X login screen. If you need some motivation to get started on your work, this helps by randomly selecting a motivational quote and displaying it right before you login.
 
-**Note: This script was designed to be run as root.**
+**Note: This was designed to be run as root. My bad.**
 
 ## Requirements
 
