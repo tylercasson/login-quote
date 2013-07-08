@@ -18,9 +18,12 @@ sh-3.2# crontab -e
 This will open a vim editor. Add a line similar to the one below, adjust the path for your system, and save and exit.
 ```console
 0 * * * * /usr/bin/python <ABSOLUTE PATH>/quote.py
-~
-~
-~
+~  
+
+~  
+
+~  
+
 "/tmp/crontab.C4QuaYgUjs" 1L, 80C
 ```
 If your cron job had no errors, your console should look like this after exiting:
