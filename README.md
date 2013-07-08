@@ -47,7 +47,8 @@ Follow me on Twitter [@tgcasson](https://twitter.com/tgcasson)
 ### Contributors
 
 [Tyler Casson](http://tylercasson.com)
-[@tgcasson](https://twitter.com/tgcasson)
+[@tgcasson](https://twitter.com/tgcasson)  
+
 Tyler Cook
 [@tcook17760](https://twitter.com/tcook17760)
 
