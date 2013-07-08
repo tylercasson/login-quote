@@ -2,6 +2,11 @@ Login Quote is a simple script that changes the message on the Mac OS X login sc
 
 **Note: This script was designed to be run as root.**
 
+## Requirements
+
+- Python (duh)
+- BeautifulSoup4 (The included install.command will take care of this)
+
 ## How To Get Started
 
 Clone this repository and do the following:
