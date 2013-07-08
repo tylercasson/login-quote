@@ -44,10 +44,12 @@ Simply double click on the included install.command file.
 
 Follow me on Twitter [@tgcasson](https://twitter.com/tgcasson)
 
-### Creators
+### Contributors
 
 [Tyler Casson](http://tylercasson.com)
 [@tgcasson](https://twitter.com/tgcasson)
+Tyler Cook
+[@tcook17760](https://twitter.com/tcook17760)
 
 ## License
 
