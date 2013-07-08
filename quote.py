@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from bs4 import BeautifulSoup
 import urllib2
-from random import choice
+import random
 import time
 import os
 
@@ -47,7 +47,10 @@ def get_quote(url):
 	page5 = urllib2.urlopen(url.format('5')).read()
 	soup = BeautifulSoup(page1 + page2 + page3 + page4 + page5)
 	bricks = soup.find_all(title='view quote')
-	message = choice(bricks).text
+	r = random.randint(0,len(bricks))
+	author = soup.find_all(title='view author')
+	message = bricks[r].text + "\n-" + author[r].text
+	#message = choice(bricks).text
 	print message.replace('"', '\"')
 	return message.replace('"', '\"')
 
