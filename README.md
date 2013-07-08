@@ -29,7 +29,7 @@ If all went well, your Mac will automatically change the quote on your login scr
 
 **Or**
 
-Simply double click on the included install.command file. 
+Simply double click on the included install.command file.  
 **Note: This is completely non-destructive and will not interfere with any existing cron jobs you may have.**
 
 ## Contact
