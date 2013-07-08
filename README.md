@@ -8,7 +8,7 @@ Login Quote is a simple script that changes the message on the Mac OS X login sc
 ```console
 sh-3.2# crontab -e
 ```
-This will open a vim editor. Add a line similar to the one below, then save and exit.
+This will open a vim editor. Add a line similar to the one below, adjust the path for your system, and save and exit.
 ```console
 0 * * * * /usr/bin/python <ABSOLUTE PATH>/Login\ Quote/quote.py
 ~
