@@ -4,13 +4,15 @@ Login Quote is a simple script that changes the message on the Mac OS X login sc
 
 ## How To Get Started
 
+Clone this repository and do the following:
+
 - Add this script as a cron job as root. (This example runs every hour)
 ```console
 sh-3.2# crontab -e
 ```
 This will open a vim editor. Add a line similar to the one below, adjust the path for your system, and save and exit.
 ```console
-0 * * * * /usr/bin/python <ABSOLUTE PATH>/Login\ Quote/quote.py
+0 * * * * /usr/bin/python <ABSOLUTE PATH>/quote.py
 ~
 ~
 ~
@@ -24,6 +26,11 @@ sh-3.2#
 ```  
 
 If all went well, your Mac will automatically change the quote on your login screen every hour. Feel free to experiment and have a productive day.
+
+**Or**
+
+Simply double click on the included install.command file.  
+**Note: This is completely non-destructive and will not interfere with any existing cron jobs you may have.**
 
 ## Contact
 
