@@ -46,10 +46,10 @@ Follow me on Twitter [@tgcasson](https://twitter.com/tgcasson)
 
 ### Contributors
 
-[Tyler Casson](http://tylercasson.com)
+[Tyler Casson](https://bitbucket.org/tylr)
 [@tgcasson](https://twitter.com/tgcasson)  
 
-Tyler Cook
+[Tyler Cook](https://bitbucket.org/chef1991)
 [@tcook17760](https://twitter.com/tcook17760)
 
 ## License
