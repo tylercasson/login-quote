@@ -47,7 +47,7 @@ def get_quote(url):
 	page5 = urllib2.urlopen(url.format('5')).read()
 	soup = BeautifulSoup(page1 + page2 + page3 + page4 + page5)
 	bricks = soup.find_all(title='view quote')
-	r = randint(0,len(bricks))
+	r = randint(0,len(bricks) - 1)
 	author = soup.find_all(title='view author')
 	message = bricks[r].text + "\n-" + author[r].text
 	print message.replace('"', '\"')
