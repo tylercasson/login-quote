@@ -35,7 +35,7 @@ sh-3.2#
 
 If all went well, your Mac will automatically change the quote on your login screen every hour. Feel free to experiment and have a productive day.
 
-or
+**Or**
 
 Simply double click on the included install.command file.  
 **Note: This is completely non-destructive and will not interfere with any existing cron jobs you may have.**
