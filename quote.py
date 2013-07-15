@@ -30,16 +30,14 @@ message = ''
 localtime = time.asctime(time.localtime(time.time()))
 
 
-"""Fetches and returns a random quote
-
-:param url:         webpage containing quotes
-:type url:          string
-
-:return message:    randomly selected quote
-:type message:      string
-
-"""
 def get_quote(url):
+	"""Fetches and returns a random quote
+	:param url:         webpage containing quotes
+	:type url:          string
+
+	:return message:    randomly selected quote
+	:type message:      string
+	"""
 	global message
 	page1 = urllib2.urlopen(url.format('')).read()
 	page2 = urllib2.urlopen(url.format('2')).read()
@@ -55,26 +53,25 @@ def get_quote(url):
 	return message.replace('"', '\"')
 
 
-"""Sets the login window's message
-
-:param quote:    quote to be used as the message
-:type quote:     string
-
-"""
 def set_login_message(quote):
+	"""Sets the login window's message
+	:param quote:    quote to be used as the message
+	:type quote:     string
+	"""
 	os.system('defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"{0}\"'.format(quote))
 
 
-"""Formats the history output into a two column thing <<< WIP >>>
-
-:param text:      text to be formatted
-:type text:       string
-
-:return width:    desired width of the quote column in characters
-:type width:      integer
-
-"""
 def format(text, width):
+	"""Formats the history output into a two column thing <<< WIP >>>
+	:param text:               text to be formatted
+	:type text:                string
+
+	:param width:              desired width of the quote column in characters
+	:type width:               integer
+
+	:return formatted_text:    text formatted to fit within width
+	:type formatted text:      string
+	"""
 	formatted_text = ''
 	text_list = text.replace('\n', '').split('-')
 	quote_words = text_list[0].split(' ')
@@ -84,14 +81,17 @@ def format(text, width):
 	word = 0
 	line = 0
 	for word in quote_words:
-		if (len(temp_text) + len(word)) < width:  # next word does fit within desired width
+		if (len(temp_text) + len(word)) < width:
+			# Word does fit within desired width
 			temp_text += word + ' '
-			if word == quote_words[len(quote_words) - 1]:  # word is the last word in the list
+			if word == quote_words[len(quote_words) - 1]:
+				# Word is the last word in the list
 				if line == 0:
 					formatted_text += 4 * ' ' + temp_text + '\n'
 				else:
 					formatted_text += (len(localtime) + 4) * ' ' + temp_text + '\n'
-		else:  # next word does not fit within desired width
+		else:
+			# Word does not fit within desired width
 			temp_text += word + ' '  # tack it on anyway because I'm tired and I can't see what I'm typing anymore
 			if line == 0:
 				formatted_text += 4 * ' ' + temp_text + '\n'
@@ -99,13 +99,12 @@ def format(text, width):
 				formatted_text += (len(localtime) + 4) * ' ' + temp_text + '\n'
 			temp_text = ''
 			line += 1
-	return formatted_text + author
+		formatted_text += author
+	return formatted_text
 
 
-"""Writes latest quote to the history file
-
-"""
 def write_data():
+	"""Writes latest quote to the history file"""
 	try:
 		open('/Library/Application Support/Login Quote/login_message_history.txt', 'r')
 	except Exception, e:
