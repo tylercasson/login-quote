@@ -70,13 +70,13 @@ def format(text, width):
 	:type width:               integer
 
 	:return formatted_text:    text formatted to fit within width
-	:type formatted text:      string
+	:type formatted_text:      string
 	"""
 	formatted_text = ''
 	text_list = text.replace('\n', '').split('-')
 	quote_words = text_list[0].split(' ')
 	author = text.split('-')
-	author = (len(localtime) + 4) * ' ' + '- ' + author[len(author) - 1]
+	author = (len(localtime) + 4) * ' ' + '-' + author[len(author) - 1]
 	temp_text = ''
 	word = 0
 	line = 0
@@ -99,7 +99,7 @@ def format(text, width):
 				formatted_text += (len(localtime) + 4) * ' ' + temp_text + '\n'
 			temp_text = ''
 			line += 1
-		formatted_text += author
+	formatted_text += author
 	return formatted_text
 
 
