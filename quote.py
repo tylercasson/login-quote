@@ -39,12 +39,16 @@ def get_quote(url):
 	:type message:      string
 	"""
 	global message
-	page1 = urllib2.urlopen(url.format('')).read()
-	page2 = urllib2.urlopen(url.format('2')).read()
-	page3 = urllib2.urlopen(url.format('3')).read()
-	page4 = urllib2.urlopen(url.format('4')).read()
-	page5 = urllib2.urlopen(url.format('5')).read()
-	soup = BeautifulSoup(page1 + page2 + page3 + page4 + page5)
+	page = ''
+	for x in xrange(1,6):
+		if x is 1:
+			req = urllib2.Request(url.format(''))
+		else:
+			req = urllib2.Request(url.format(str(x)))
+		req.add_header("User-agent", "Login Quote (www.tylercasson.com)")
+		page += urllib2.urlopen(req).read()
+
+	soup = BeautifulSoup(page)
 	bricks = soup.find_all(title='view quote')
 	r = randint(0,len(bricks) - 1)
 	author = soup.find_all(title='view author')
@@ -107,7 +111,7 @@ def write_data():
 	"""Writes latest quote to the history file"""
 	try:
 		open('/Library/Application Support/Login Quote/login_message_history.txt', 'r')
-	except Exception, e:
+	except Exception:
 		os.system('mkdir /Library/Application\ Support/Login\ Quote')
 	f = open('/Library/Application Support/Login Quote/login_message_history.txt', 'a')
 	f.write(localtime + format(message, 50) + '\n\n')
